@@ -1,0 +1,657 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: whitesmoke;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 0;
+
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 300;
+}
+nav {
+    backdrop-filter: blur(1px);
+}
+
+
+
+/* modal */
+.button {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 28px;
+}
+  .a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 30px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s;
+}
+
+.sof {
+    backdrop-filter: blur(10000px);
+    background-color: gray;
+}
+.sof:hover {
+    background-color: #db0000;
+    font-weight: 700;
+}
+
+.har{
+    background-color: whitesmoke;
+    color: black;
+    font-weight: 400;
+}
+
+.har:hover{
+    background-color: black;
+    color: white;
+    font-weight: 700;
+}
+
+
+.a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.a:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+  .modal {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0; right: 0;
+    bottom: 0; left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+    background-color: transparent;
+    transition: all .4s;
+    z-index: +1;
+  }
+
+  .modal:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .modal_content {
+    border-radius: 5px;
+    position: relative;
+    width: 50%;
+    max-width: 100%;
+    background: black;
+    padding: 1.5em 2em;
+    color: whitesmoke;
+  }
+  
+  .modal_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: grey;
+    text-decoration: none;
+  }
+  /*skills*/
+  .skills {
+    height: 60vh;
+    padding-top: 1px;
+}
+
+.skills li {
+    margin: 0.15rem 0;
+    padding: 0.015rem;
+    list-style-type: none;
+}
+
+.fill {
+    background: #353b48;
+    display: block;
+    height: 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.fill span {
+    height: 1.25rem;
+    float: left;
+    background: linear-gradient(135deg, rgba(139, 0, 0, 1)0%, rgba(252, 103, 103, 1)100%);
+}
+
+.html {
+    width: 80%;
+}
+
+.css {
+    width: 75%;
+}
+
+.javascript {
+    width: 68%;
+}
+
+.react {
+    width: 55%;
+}
+
+.nodejs {
+    width: 35%;
+}
+
+.gradient {
+    background: linear-gradient(transparent, black);
+}
+
+/*Caroussel*/
+.wrapper {
+    z-index: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+  .wrapper section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 20px 0;
+  }
+  .wrapper section .item {
+    padding: 0 2px;
+    transition: 250ms all;
+  }
+  .wrapper section .item:hover {
+    margin: 0 40px;
+    transform: scale(1.2);
+  }
+  .wrapper section a {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 6em;
+    background: black;
+    width: 80px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+  }
+  .wrapper section a:nth-of-type(1) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 500%);
+  }
+  .wrapper section a:nth-of-type(2) {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 500%);
+  }
+
+  .heading {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+  }
+
+  .duration {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    color: #fff;
+  }
+
+
+/* small device */
+@media (max-width : 767.5px) {
+
+    .blockpage {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* heading */
+    .headbar {
+        height: 5vh;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 16px;
+        backdrop-filter: blur(15px);
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+    h5 {
+        font-size: 8px;
+    }
+    .image{
+        background-image:url(images/mr__robot___hello_friend___season_finale_wallpaper_by_niushsitaula_ddn3p6j-fullview.jpg);
+         background-size: cover;
+         background-position: center;
+    }
+
+
+    /* navbar */
+    .navbar {
+        height: 3vh;
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0px 30px 0px 30px;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 10px;
+    }
+
+    /* about me  */
+
+    .about_me {
+        height: 50vh;
+        text-align: center;
+    }
+    .title{
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;    
+    }
+    .button{
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+
+    }
+    .a {
+        font-size: 10px;
+            padding: 10px 10px;
+            border-radius: 30px;
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+            transition: all 0.2s;    
+    }
+
+    .modal_content {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        justify-content: center;
+        align-content: center;
+
+    }
+    .modal_content h2 {
+        font-size: 30px;
+    }
+    .modal_content p {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+
+
+    .story {
+        height: 10vh;
+        flex: 1 1 48%;
+        display: none;
+    }
+
+    .sof {
+        background-color: #db0000;
+        color: black;
+        font-weight: 600;
+    }
+
+    .sto {
+        font-weight: 700;
+    }
+    .har {
+        background-color: #353b48;
+        color: white;
+        font-weight: 600;
+    }
+
+
+    .softskill {
+        display: none;
+    }
+    .softskillmini {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .softskillmini img {
+        width : 45px;
+        height: 45px;
+        margin-left: 5px;
+    }
+
+    /* portfolio */
+    .portfolio {
+        height: 30vh;
+        text-align: center;
+    }
+
+    .portfolio img {
+        width: 100px;
+        height: 56px;
+    }
+    .wrapper section a {
+
+        font-size: 40px;
+        width: 40px;
+        padding: 10px;
+      }
+    
+    /* last_projects */
+    .last_projects {
+        margin-top: -10px;
+        height: 30vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: space-between;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+    h5 {
+        font-size: 10px;
+    }
+    p {
+        font-size: 8px;
+    }
+    .diploma {
+        width: 48%;
+    }
+    .experiences {
+        width: 48%;
+    }
+
+    /* contact */
+
+    .contact {
+        height: 5vh;
+        display: flex;
+        justify-content: space-around;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+/* -----laptop----- */
+
+@media (min-width :768px) {
+
+    .blockpage {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0px;
+        background-color: transparent;
+    }
+
+    /* heading */
+    .headbar {
+        
+        display: flex;
+        width: 40%;
+    }
+
+    h1 {
+        font-size: 50px;
+        font-weight: 900;
+        margin-bottom: 0px;
+        line-height: 30px;
+        margin-left: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-left: 25px;
+    }
+
+    h3 {
+        text-align: center;
+        font-weight: 700;
+    }
+
+    h4 {
+        text-align: center;
+    }
+
+
+    /* navbar */
+    nav {
+        width: 58%;
+    }
+
+    .navbar {
+        /* background-color: lightslategrey; */
+        height: 5vh;
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 15px 30px 0px 30px;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 15px;
+        -webkit-backdrop-filter: blur(1px); 
+    backdrop-filter: blur(1px);
+    background-color: transparent;
+
+    }
+
+    .navbar__link {
+        display: inline;
+        padding: 0 10px;
+    }
+
+    .navbar__link>a {
+        padding: 0 10px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .navbar__link>a::after {
+        display: block;
+        content: "";
+        width: 0%;
+        height: 1px;
+        background: white;
+        transition: 0.4s;
+
+    }
+
+    .navbar__link:hover>a::after {
+        width: 100%;
+    }
+        .image{
+            background-image:url(images/mr__robot___hello_friend___season_finale_wallpaper_by_niushsitaula_ddn3p6j-fullview.jpg);
+             background-size: cover;
+             background-position: center;
+        }
+
+    /* about me  */
+
+    .about_me {
+        margin-top: 160px;
+        padding-top: 10px;
+        height: 50vh;
+        background:transparent;
+        width: 40%;
+        -webkit-backdrop-filter: blur(1px); /* assure la compatibilité avec safari */
+        backdrop-filter: blur(1px);
+        background-color: transparent;
+
+    }
+    .sto {
+        display: none;
+
+    }
+
+    .title {
+        height: 20vh;
+    }
+
+    .story {
+        height: 15vh;
+        margin-left: 25px;
+    }
+
+      .icons h3 {
+        font-size: 15px;
+        font-weight: 300;
+      }
+      .icon {
+        width: 100px;
+        height: 100px;
+      }
+      .modal_content {
+        width:70%;
+        height: 70%;
+      }
+
+      .softskill {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .softskill h5 {
+        margin-left: 18px;
+      }
+      .softskillmini {
+        display: none;
+    }
+
+    /* portfolio */
+    .portfolio {
+        /* background-color: lightgreen; */
+        height: 45vh;
+        margin-top: 0px;
+        z-index: 1;
+    }
+
+  /* last_projects */
+    .last_projects {
+        /* background-color: lightpink; */
+        height: 80vh;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .last_projects p {
+        text-align: left;
+    }
+
+    .last_projects h5 {
+        text-align: left;
+    }
+    .diploma {
+        width: 48%;
+    }
+    .experiences {
+        width: 48%;
+    }
+
+    /* contact */
+
+    .contact {
+        /* background-color: lightcoral; */
+        height: 5vh;
+        display: flex;
+        justify-content: space-around;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+
+@media (min-width: 767px) and (max-width : 1107px) {
+    header {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* heading */
+    .headbar {
+        display: flex;
+        width: 48%;
+    }
+
+    .heading {
+        height: 20vh;
+        flex: 1 1 49%;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 0px;
+        line-height: 50px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+
+    /* navbar */
+    nav {
+        margin-top: 25px;
+        width: 100%;
+    }
+
+    .navbar {
+        height: 5vh;
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 15px 30px 0px 30px;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 20px;
+
+    }
+    .modal_content {
+        width:70%;
+        height: 40%;
+      }
+    .portfolio {
+        height: 30vh;
+    }
+    .last_projects {
+        height: 50vh;
+    }
+}
